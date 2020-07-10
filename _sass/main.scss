@@ -1,0 +1,462 @@
+@import 'normalise';
+@import 'variables';
+
+body {
+  background-color: $background;
+  color: $gray-scale-1;
+  font-family: 'GT Haptik', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $gray-scale-1;
+  text-decoration: none;
+
+  &:hover {
+    color: $gray-scale-1;
+  }
+}
+
+p {
+  color: $gray-scale-1;
+
+  &.large {
+    font-size: $space-24;
+    line-height: 1.5em;
+    margin-bottom: 40px;
+  }
+}
+
+h1, h2 {
+  margin: 0 0 $space-24;
+  font-size: $space-80;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  z-index: 1;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $space-20;
+
+  &.large {
+    max-width: 1180px;
+  }
+
+  &.medium {
+    max-width: 780px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.padding-v16 {
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+}
+
+.padding-t16 {
+  padding-top: $space-16;
+}
+
+.margin-b240 {
+  margin-bottom: $space-240;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.title-underline {
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(180deg,transparent 68px, $color-primary-500 0);
+  background-repeat: no-repeat;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: none;
+  color: $gray-scale-1;
+  background-color: $color-primary-500;
+  padding: $space-16 $space-32;
+  border-radius: 50px;
+  border: 2px solid $color-primary-500;
+  font-size: 16px;
+  line-height: 1.2em;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $color-primary-600;
+    border-color: $color-primary-600;
+  }
+
+  &.secondary {
+    background-color: $gray-scale-1;
+    color: $gray-scale-13;
+    border-color: $gray-scale-1;
+
+    &:hover {
+      background-color: $color-primary-500;
+      border-color: $color-primary-500;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: $gray-scale-1;
+    border-color: $gray-scale-1;
+
+    &:hover {
+      color: $gray-scale-13;
+      background-color: $gray-scale-1;
+    }
+  }
+
+  &.btn-small {
+    padding: $space-8 $space-16;
+    font-size: 14px;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+  li {
+      margin: 0 $space-20;
+  }
+
+  a {
+    color: $gray-scale-7;
+    font-weight: 500;
+
+    &:hover {
+      color: $gray-scale-1;
+    }
+  }
+}
+
+.index-header {
+  margin: $space-240 auto;
+}
+
+
+.current-status {
+  font-weight: 500;
+
+  p {
+    color: $gray-scale-6;
+  }
+
+  .role {
+      color: $gray-scale-1
+  }
+
+  .status-indicator {
+    display: inline-block;
+    height: $space-8;
+    width: $space-8;
+    border-radius: 50%;
+    margin-right: $space-4;
+    background-color: $color-success-500;
+    position: relative;
+    top: -1px;
+    box-shadow: 0 0 8px $color-success-500;
+  }
+}
+
+.case-studies {
+  column-gap: 20px;
+  row-gap: 20px;
+
+  .case-study {
+    background-color: $gray-scale-9;
+    height: 100px;
+    border-radius: $border-radius;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    &.large {
+      grid-column-end: span 2;
+      height: 600px;
+    }
+
+    &.small {
+      height: 400px;
+    }
+
+    .logo {
+      position: absolute;
+      left: 48px;
+      top: 48px;
+    }
+
+    .btn {
+      position: absolute;
+      left: 48px;
+      bottom: 48px;
+    }
+
+    &.memrise {
+      background-image: url("/../assets/img/memrise-header.png");
+      background-color: $memrise-primary;
+      background-size: auto 100%;
+
+      .btn.outline {
+        border-color: $memrise-secondary;
+        color: $memrise-secondary;
+
+        &:hover {
+          color: $memrise-primary;
+          background-color: $memrise-secondary;
+        }
+      }
+    }
+
+    &.fatllama {
+      background-image: url("/../assets/img/fatllama-header.png");
+      background-color: $fatllama-primary;
+      background-size: auto 80%;
+
+      .btn.outline {
+        border-color: $fatllama-secondary;
+        color: $fatllama-secondary;
+
+        &:hover {
+          color: $fatllama-primary;
+          background-color: $fatllama-secondary;
+        }
+      }
+    }
+
+    &.gocardless {
+      background-image: url("/../assets/img/gocardless-header.png");
+      background-color: $gocardless-primary;
+      background-size: auto 80%;
+
+      .btn {
+        border-color: $gocardless-secondary;
+        color: $gocardless-secondary;
+
+        &:hover {
+          color: $gocardless-primary;
+          background-color: $gocardless-secondary;
+        }
+      }
+    }
+  }
+}
+
+.selected-work {
+  text-align: center;
+
+  .grid {
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 380px);
+  }
+
+  .work-item {
+    background-color: $gray-scale-9;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    &.landscape {
+      grid-column-end: span 2;
+
+      &.gc-dashboard {
+        background-color: #639CED;
+        background-image: url("/../assets/img/gc-dashboard.png");
+        background-position: 50% 100%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+      }
+
+      &.dependabot {
+        background-image: url("/../assets/img/dependabot.png");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &.beagle-site {
+        background-color: #EE8EBC;
+        background-image: url("/../assets/img/beagle-site.png");
+        background-position: 50% 100%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.portrait {
+      grid-row: span 2;
+
+      &.fl-location {
+        background-color: #4629D3;
+        background-image: url("/../assets/img/fl-location.png");
+        background-position: 50% 50%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+      }
+
+      &.fl-search {
+        background-color: #4629D3;
+        background-image: url("/../assets/img/fl-search.png");
+        background-position: 50% 50%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+      }
+
+      &.fl-home {
+        background-color: $fatllama-primary;
+        background-image: url("/../assets/img/fl-home.png");
+        background-position: 50% 50%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+      }
+
+      &.memrise-plans {
+        background-color: $memrise-primary;
+        background-image: url("/../assets/img/memrise-plans.png");
+        background-position: 50% 50%;
+        background-size: 90%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.square {
+      &.beamo-logo {
+        background-image: url("/../assets/img/beamo-logo.png");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.approach {
+  flex-direction: row;
+
+  .grid {
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 280px;
+  }
+
+  .approach-step {
+    background-color: $gray-scale-10;
+    border-radius: $border-radius;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .approach-step--header {
+      display: flex;
+      justify-content: space-between;
+
+      .step-number {
+        font-weight: 500;
+        color: $gray-scale-6;
+      }
+
+      .icon-container {
+        border-radius: $space-8;
+        height: $space-48;
+        width: $space-48;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.strategy {
+          background-color: $color-danger-400;
+        }
+
+        &.research {
+          background-color: $color-warning-400;
+        }
+
+        &.prototyping {
+          background-color: $color-success-400;
+        }
+
+        &.execution {
+          background-color: $color-info-400;
+        }
+      }
+    }
+
+    .approach-step--footer {
+      h3 {
+        font-size: 24px;
+        line-height: 1.2em;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 0;
+        line-height: 1.5em;
+        color: $gray-scale-6;
+      }
+    }
+  }
+}
+
+.design-club {
+
+  .design-club--image {
+    background-image: url("/../assets/img/design-club.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    border-radius: $border-radius;
+  }
+
+  .buttons {
+    .btn {
+      margin: 0 $space-8;
+    }
+  }
+}
+
+.footer {
+  .footer-box {
+    flex-direction: column;
+    height: 600px;
+    background-color: $color-primary-500;
+    justify-content: center;
+    border-radius: $border-radius;
+  }
+
+  .final-word {
+    margin: 40px 0;
+    color: $gray-scale-7;
+  }
+}
