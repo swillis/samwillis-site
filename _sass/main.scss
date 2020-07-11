@@ -3,11 +3,13 @@
 
 body {
   background-color: $background;
+  background-color: $gray-scale-11;
   color: $gray-scale-1;
   font-family: 'GT Haptik', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.2em;
   -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: common-ligatures;
 }
 
 a {
@@ -25,7 +27,7 @@ p {
   &.large {
     font-size: $space-24;
     line-height: 1.5em;
-    margin-bottom: 40px;
+    margin-bottom: $space-48;
   }
 }
 
@@ -79,6 +81,10 @@ h1, h2 {
   padding-top: $space-16;
 }
 
+.margin-b40 {
+  margin-bottom: $space-40 !important;
+}
+
 .margin-b240 {
   margin-bottom: $space-240;
 }
@@ -100,16 +106,28 @@ h1, h2 {
   text-decoration: none;
   color: $gray-scale-1;
   background-color: $color-primary-500;
-  padding: $space-16 $space-32;
+  padding: 0 $space-24;
+  line-height: 44px;
   border-radius: 50px;
   border: 2px solid $color-primary-500;
   font-size: 16px;
-  line-height: 1.2em;
   box-sizing: border-box;
+  // -webkit-font-smoothing: subpixel-antialiased ;
+  font-weight: 500;
 
   &:hover {
     background-color: $color-primary-600;
     border-color: $color-primary-600;
+  }
+
+  &.social {
+    padding: 0;
+    width: 48px;
+    margin-left: $space-16;
+
+    img {
+      vertical-align: sub;
+    }
   }
 
   &.secondary {
@@ -135,8 +153,18 @@ h1, h2 {
   }
 
   &.btn-small {
-    padding: $space-8 $space-16;
+    padding: 0 $space-16;
     font-size: 14px;
+    line-height: 32px;
+  }
+
+  &.btn-large {
+    padding: 0 $space-32;
+    line-height: 52px;
+  }
+
+  &.btn-footer {
+    color: $color-primary-500;
   }
 }
 
@@ -184,7 +212,14 @@ h1, h2 {
     background-color: $color-success-500;
     position: relative;
     top: -1px;
-    box-shadow: 0 0 8px $color-success-500;
+    // box-shadow: 0 0 8px $color-success-500;
+    animation: pulse 1s infinite;
+
+    @keyframes pulse {
+      0%   { box-shadow: 0px 0px 0px 0px $color-success-transparent-500; }
+      50%   { box-shadow: 0px 0px 0px 2px rgba(105, 209, 41, 0.4); }
+      100% { box-shadow: 0px 0px 0px 4px rgba(105, 209, 41, 0); }
+    }
   }
 }
 
@@ -285,12 +320,50 @@ h1, h2 {
     background-color: $gray-scale-9;
     border-radius: $border-radius;
     overflow: hidden;
+    position: relative;
+    transition: background-size, 0.2s;
+
+    .work-item-info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(24,24,24,0.8);
+      opacity: 0;
+      transition: opacity, 0.2s;
+
+
+      .work-item--company {
+        font-weight: 500;
+        color: $gray-scale-7;
+        margin-bottom: $space-8;
+      }
+
+      .work-item--title {
+        color: $gray-scale-1;
+        margin: 0;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2em;
+      }
+    }
+
+    &:hover {
+      .work-item-info {
+        opacity: 1;
+      }
+    }
 
     &.landscape {
       grid-column-end: span 2;
 
       &.gc-dashboard {
-        background-color: #639CED;
+        background-color: #00BC6E;
         background-image: url("/../assets/img/gc-dashboard.png");
         background-position: 50% 100%;
         background-size: 90%;
@@ -298,10 +371,15 @@ h1, h2 {
       }
 
       &.dependabot {
-        background-image: url("/../assets/img/dependabot.png");
+        background-image: url("/../assets/img/dependabot.jpg");
         background-position: 50% 50%;
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
+        background-color: $gray-scale-1;
+
+        &:hover {
+          background-size: 90% !important;
+        }
       }
 
       &.beagle-site {
@@ -310,6 +388,11 @@ h1, h2 {
         background-position: 50% 100%;
         background-size: 90%;
         background-repeat: no-repeat;
+      }
+
+
+      &:hover {
+        background-size: 80% !important;
       }
     }
 
@@ -320,7 +403,7 @@ h1, h2 {
         background-color: #4629D3;
         background-image: url("/../assets/img/fl-location.png");
         background-position: 50% 50%;
-        background-size: 90%;
+        background-size: 80%;
         background-repeat: no-repeat;
       }
 
@@ -328,15 +411,15 @@ h1, h2 {
         background-color: #4629D3;
         background-image: url("/../assets/img/fl-search.png");
         background-position: 50% 50%;
-        background-size: 90%;
+        background-size: 80%;
         background-repeat: no-repeat;
       }
 
-      &.fl-home {
-        background-color: $fatllama-primary;
-        background-image: url("/../assets/img/fl-home.png");
+      &.beally-app {
+        background-color: #FDC28A;
+        background-image: url("/../assets/img/beally-app.png");
         background-position: 50% 50%;
-        background-size: 90%;
+        background-size: 80%;
         background-repeat: no-repeat;
       }
 
@@ -344,8 +427,13 @@ h1, h2 {
         background-color: $memrise-primary;
         background-image: url("/../assets/img/memrise-plans.png");
         background-position: 50% 50%;
-        background-size: 90%;
+        background-size: 80%;
         background-repeat: no-repeat;
+      }
+
+
+      &:hover {
+        background-size: 70% !important;
       }
     }
 
@@ -353,8 +441,14 @@ h1, h2 {
       &.beamo-logo {
         background-image: url("/../assets/img/beamo-logo.png");
         background-position: 50% 50%;
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
+        background-color: #2356FF;
+      }
+
+
+      &:hover {
+        background-size: 90% !important;
       }
     }
   }
@@ -371,7 +465,7 @@ h1, h2 {
   }
 
   .approach-step {
-    background-color: $gray-scale-10;
+    background-color: $gray-scale-9;
     border-radius: $border-radius;
     padding: 40px;
     text-align: left;
@@ -437,6 +531,7 @@ h1, h2 {
     width: 100%;
     height: 600px;
     border-radius: $border-radius;
+    margin: $space-80 0 $space-48;
   }
 
   .buttons {
