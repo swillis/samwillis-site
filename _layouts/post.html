@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    {% include _nav-posts.html %}
+    <div class="case-study-page">
+      <div class="container medium">
+        <div class="case-study-header">
+          <div class="meta-data">
+            <p><span class="number-highlight">{{ page.number }}</span> / 03 — <span>{{ page.company }}</span></p>
+          </div>
+          <h1>{{ page.title }}</h1>
+          <div class="meta-data flex">
+            <div class="meta-data-container">
+              <p class="case-study-label">Year</p>
+              <p>{{ page.year }}</p>
+            </div>
+            <div class="meta-data-container">
+              <p class="case-study-label">Role</p>
+              <p>{{ page.role }}</p>
+            </div>
+            <div class="meta-data-container">
+              <p class="case-study-label">Link</p>
+              <a href="{{ page.link-actual }}" target="_blank">{{ page.link-visible }}</a>
+            </div>
+          </div>
+          <div class="meta-data">
+            <div class="meta-data-container team">
+              <p class="case-study-label">Team</p>
+              <p>{{ page.team }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container large case-study--content margin-b240">
+        {{ content }}
+      </div>
+    </div>
+    {% include _footer.html %}
+  </body>
+</html>

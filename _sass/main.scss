@@ -3,7 +3,6 @@
 
 body {
   background-color: $background;
-  background-color: $gray-scale-11;
   color: $gray-scale-1;
   font-family: 'GT Haptik', Helvetica, sans-serif;
   font-size: 16px;
@@ -172,6 +171,7 @@ h1, h2 {
   list-style: none;
   display: flex;
   flex-direction: row;
+  margin: 0;
 
   li {
       margin: 0 $space-20;
@@ -553,5 +553,87 @@ h1, h2 {
   .final-word {
     margin: 40px 0;
     color: $gray-scale-7;
+  }
+}
+
+.case-study-page {
+
+  h1 {
+    margin-bottom: $space-48;
+  }
+
+  .case-study-header {
+      margin: $space-240 auto;
+  }
+
+  .meta-data {
+    flex-direction: row;
+    margin-bottom: $space-48;
+
+    .case-study-label {
+      color: $gray-scale-1;
+    }
+
+    p, a {
+      color: $gray-scale-7;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: $gray-scale-1;
+    }
+
+    .number-highlight {
+      color: $gray-scale-1;
+    }
+
+    .meta-data-container {
+      margin-right: $space-40;
+    }
+  }
+
+  .case-study--content {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p, h1, h2, h3, ul, ol {
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      margin-top: $space-80;
+      margin-bottom: $space-32;
+      font-size: $space-40;
+    }
+
+    h3 {
+      margin-top: $space-80;
+      margin-bottom: $space-32;
+      font-size: $space-24;
+    }
+
+    p, ul, ol {
+      margin-bottom: $space-32;
+      font-size: 18px;
+      line-height: 1.6em;
+      font-weight: 500;
+      color: $gray-scale-7;
+    }
+
+    li {
+      margin-bottom: $space-32;
+      color: $gray-scale-1;
+    }
+
+    .case-study--image {
+      border-radius: $border-radius;
+      overflow: hidden;
+      margin-top: $space-80;
+      margin-bottom: $space-80;
+    }
   }
 }
