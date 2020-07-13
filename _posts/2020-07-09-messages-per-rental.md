@@ -11,7 +11,7 @@ link-actual: "https://fatllama.com"
 team: "Growth Analyst, Engineer, Product Designer"
 ---
 
-<div class="case-study--image"><img src="/assets/img/case-studies/fatllama-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="/assets/img/case-studies/fatllama-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
 
 ## Background
 

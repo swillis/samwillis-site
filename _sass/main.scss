@@ -1,10 +1,11 @@
+@import 'fonts';
 @import 'normalise';
 @import 'variables';
 
 body {
   background-color: $background;
   color: $gray-scale-1;
-  font-family: 'GT Haptik', Helvetica, sans-serif;
+  font-family: 'Haptik', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.2em;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +27,7 @@ a {
 
 p {
   color: $gray-scale-1;
+  margin-top: 0;
 
   &.large {
     font-size: $space-24;
@@ -52,7 +54,7 @@ h1, h2 {
 
 .container {
   margin: 0 auto;
-  padding: 0 $space-20;
+  padding: 0 $space-32;
 
   &.large {
     max-width: 1180px;
@@ -81,6 +83,11 @@ h1, h2 {
 
 .t-center {
   text-align: center;
+}
+
+.padding-v12 {
+  padding-top: $space-12;
+  padding-bottom: $space-12;
 }
 
 .padding-v16 {
@@ -123,7 +130,6 @@ h1, h2 {
   border: 2px solid $color-primary-500;
   font-size: 16px;
   box-sizing: border-box;
-  // -webkit-font-smoothing: subpixel-antialiased ;
   font-weight: 500;
 
   &:hover {
@@ -177,10 +183,18 @@ h1, h2 {
   &.btn-footer {
     color: $color-primary-500;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $phone) {
       width: 100%;
     }
   }
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: $background;
+  border-bottom: 1px solid $gray-scale-10;
+  z-index: 9;
 }
 
 .nav-list {
@@ -191,6 +205,7 @@ h1, h2 {
 
   li {
       margin: 0 $space-20;
+      font-size: $space-14;
   }
 
   a {
@@ -208,7 +223,7 @@ h1, h2 {
 }
 
 .index-header {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -269,6 +284,7 @@ h1, h2 {
     @media (max-width: $phone) {
       height: 300px !important;
       background-size: 90% !important;
+      border-radius: $space-12;
     }
 
     &.large {
@@ -625,6 +641,10 @@ h1, h2 {
         margin-right: 20px;
       }
     }
+
+    @media (max-width: $phone) {
+      border-radius: $space-12;
+    }
   }
 }
 
@@ -716,10 +736,17 @@ h1, h2 {
 
   h1 {
     margin-bottom: $space-48;
+
+    @media (max-width: $tablet) {
+      margin-bottom: $space-40;
+    }
   }
 
   .case-study-header {
-      margin: $space-240 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .meta-data {
@@ -745,6 +772,14 @@ h1, h2 {
 
     .meta-data-container {
       margin-right: $space-40;
+
+      @media (max-width: $tablet) {
+        margin-right: $space-24;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: $space-24;
     }
   }
 
@@ -773,7 +808,7 @@ h1, h2 {
     }
 
     p, ul, ol {
-      margin-bottom: $space-32;
+      margin: 0 0 $space-32;
       font-size: 18px;
       line-height: 1.6em;
       font-weight: 500;
@@ -790,6 +825,19 @@ h1, h2 {
       overflow: hidden;
       margin-top: $space-80;
       margin-bottom: $space-80;
+      line-height: 0;
+
+      &.header {
+        margin-top: 0;
+      }
+
+      @media (max-width: $phone) {
+        border-radius: $space-8;
+      }
+
+      @media (max-width: $tablet) {
+        border-radius: $space-16;
+      }
     }
   }
 }
