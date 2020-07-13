@@ -9,6 +9,10 @@ body {
   line-height: 1.2em;
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
+
+  @media (max-width: $phone) {
+    font-size: $space-14;
+  }
 }
 
 a {
@@ -27,6 +31,10 @@ p {
     font-size: $space-24;
     line-height: 1.5em;
     margin-bottom: $space-48;
+
+    @media (max-width: $phone) {
+      font-size: $space-20;
+    }
   }
 }
 
@@ -36,6 +44,10 @@ h1, h2 {
   line-height: 1.2em;
   letter-spacing: -1px;
   z-index: 1;
+
+  @media (max-width: $phone) {
+    font-size: $space-48;
+  }
 }
 
 .container {
@@ -164,6 +176,10 @@ h1, h2 {
 
   &.btn-footer {
     color: $color-primary-500;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 }
 
@@ -185,10 +201,25 @@ h1, h2 {
       color: $gray-scale-1;
     }
   }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .index-header {
-  margin: $space-240 auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p.large {
+    margin: 0 0 $space-24;
+
+    @media (max-width: $phone) {
+      margin: 0 0 $space-20;
+    }
+  }
 }
 
 
@@ -233,31 +264,57 @@ h1, h2 {
     border-radius: $border-radius;
     position: relative;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right center;
+
+    @media (max-width: $phone) {
+      height: 300px !important;
+      background-size: 90% !important;
+    }
 
     &.large {
       grid-column-end: span 2;
       height: 600px;
+
+      @media (max-width: $tablet) {
+        height: 400px;
+      }
+
     }
 
     &.small {
       height: 400px;
+
+      @media (max-width: $tablet) {
+        grid-column-end: span 2;
+      }
     }
 
     .logo {
       position: absolute;
       left: 48px;
       top: 48px;
+
+      @media (max-width: $phone) {
+        top: 32px;
+        left: 32px;
+        transform: scale(0.7, 0.7);
+        transform-origin: top left;
+      }
     }
 
     .btn {
       position: absolute;
       left: 48px;
       bottom: 48px;
+
+      @media (max-width: $phone) {
+        bottom: 32px;
+        left: 32px;
+      }
     }
 
     &.memrise {
-      background-image: url("/../assets/img/memrise-header.png");
+      background-image: url("/../assets/img/memrise-hero.png");
       background-color: $memrise-primary;
       background-size: auto 100%;
 
@@ -273,7 +330,7 @@ h1, h2 {
     }
 
     &.fatllama {
-      background-image: url("/../assets/img/fatllama-header.png");
+      background-image: url("/../assets/img/fatllama-hero.png");
       background-color: $fatllama-primary;
       background-size: auto 80%;
 
@@ -289,7 +346,7 @@ h1, h2 {
     }
 
     &.gocardless {
-      background-image: url("/../assets/img/gocardless-header.png");
+      background-image: url("/../assets/img/gocardless-hero.png");
       background-color: $gocardless-primary;
       background-size: auto 80%;
 
@@ -314,6 +371,18 @@ h1, h2 {
     row-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 380px);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 380px);
+    }
+
+    @media (max-width: $phone) {
+      column-gap: $space-12;
+      row-gap: $space-12;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 160px);
+    }
   }
 
   .work-item {
@@ -380,6 +449,10 @@ h1, h2 {
         &:hover {
           background-size: 90% !important;
         }
+
+        @media (max-width: $tablet) {
+          grid-column-end: span 1;
+        }
       }
 
       &.beagle-site {
@@ -421,6 +494,11 @@ h1, h2 {
         background-position: 50% 50%;
         background-size: 80%;
         background-repeat: no-repeat;
+
+        @media (max-width: $tablet) {
+          grid-row-start: 1;
+          grid-row-end: span 2;
+        }
       }
 
       &.memrise-plans {
@@ -446,10 +524,18 @@ h1, h2 {
         background-color: #2356FF;
       }
 
-
       &:hover {
         background-size: 90% !important;
       }
+
+
+      @media (max-width: $tablet) {
+        grid-row-start: 4;
+      }
+    }
+
+    @media (max-width: $phone) {
+      border-radius: $space-12;
     }
   }
 }
@@ -464,6 +550,16 @@ h1, h2 {
     grid-template-rows: 280px;
   }
 
+  .approach-steps-container {
+    @media (max-width: $tablet) {
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
   .approach-step {
     background-color: $gray-scale-9;
     border-radius: $border-radius;
@@ -472,6 +568,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 
     .approach-step--header {
       display: flex;
@@ -520,6 +617,14 @@ h1, h2 {
         color: $gray-scale-6;
       }
     }
+
+    @media (max-width: $tablet) {
+      width: 280px;
+
+      &:last-child {
+        margin-right: 20px;
+      }
+    }
   }
 }
 
@@ -528,15 +633,30 @@ h1, h2 {
   .design-club--image {
     background-image: url("/../assets/img/design-club.jpg");
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 600px;
     border-radius: $border-radius;
     margin: $space-80 0 $space-48;
+
+    @media (max-width: $tablet) {
+      height: 400px;
+    }
+
+    @media (max-width: $phone) {
+      height: 200px;
+      border-radius: $space-12;
+    }
   }
 
   .buttons {
     .btn {
       margin: 0 $space-8;
+
+      @media (max-width: $phone) {
+        margin: 0 0 $space-8;
+        width: 100%
+      }
     }
   }
 }
@@ -548,11 +668,47 @@ h1, h2 {
     background-color: $color-primary-500;
     justify-content: center;
     border-radius: $border-radius;
+    padding: 0 $space-80;
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+
+      .social-buttons {
+        @media (max-width: $phone) {
+          display: flex;
+          justify-content: space-around;
+          margin-top: $space-24;
+
+          .social {
+            margin: 0;
+          }
+        }
+      }
+
+      @media (max-width: $phone) {
+        flex-direction: column;
+
+        .btn-footer {
+          color: $gray-scale-12;
+        }
+      }
+    }
+
+    @media (max-width: $phone) {
+      border-radius: 0;
+      padding: 0 $space-24;
+      background-color: $gray-scale-9;
+    }
   }
 
   .final-word {
     margin: 40px 0;
     color: $gray-scale-7;
+  }
+
+  @media (max-width: $phone) {
+    padding: 0;
   }
 }
 
