@@ -10,7 +10,7 @@ body {
   background-color: $background;
   color: $gray-scale-1;
   font-family: 'Haptik', Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: $space-16;
   line-height: 1.2em;
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
@@ -132,7 +132,7 @@ h1, h2 {
   line-height: 44px;
   border-radius: 50px;
   border: 2px solid $color-primary-500;
-  font-size: 16px;
+  font-size: $space-16;
   box-sizing: border-box;
   font-weight: 500;
 
@@ -143,7 +143,7 @@ h1, h2 {
 
   &.social {
     padding: 0;
-    width: 48px;
+    width: $space-48;
     margin-left: $space-16;
 
     img {
@@ -175,7 +175,7 @@ h1, h2 {
 
   &.btn-small {
     padding: 0 $space-16;
-    font-size: 14px;
+    font-size: $space-14;
     line-height: 32px;
   }
 
@@ -232,7 +232,7 @@ h1, h2 {
 }
 
 .index-header {
-  height: 85vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,7 +267,6 @@ h1, h2 {
     background-color: $color-success-500;
     position: relative;
     top: -1px;
-    // box-shadow: 0 0 8px $color-success-500;
     animation: pulse 1s infinite;
 
     @keyframes pulse {
@@ -280,8 +279,8 @@ h1, h2 {
 
 .case-studies {
   margin-top: -$nav-height;
-  column-gap: 20px;
-  row-gap: 20px;
+  column-gap: $space-20;
+  row-gap: $space-20;
 
   .case-study {
     background-color: $gray-scale-9;
@@ -290,6 +289,11 @@ h1, h2 {
     position: relative;
     background-repeat: no-repeat;
     background-position: right center;
+    transition: background-position, 0.6s;
+
+    &:hover {
+      background-position: 90% center;
+    }
 
     @media (max-width: $phone) {
       height: 300px !important;
@@ -317,12 +321,12 @@ h1, h2 {
 
     .logo {
       position: absolute;
-      left: 48px;
-      top: 48px;
+      left: $space-48;
+      top: $space-48;
 
       @media (max-width: $phone) {
-        top: 32px;
-        left: 32px;
+        top: $space-32;
+        left: $space-32;
         transform: scale(0.7, 0.7);
         transform-origin: top left;
       }
@@ -330,12 +334,12 @@ h1, h2 {
 
     .btn {
       position: absolute;
-      left: 48px;
-      bottom: 48px;
+      left: $space-48;
+      bottom: $space-48;
 
       @media (max-width: $phone) {
-        bottom: 32px;
-        left: 32px;
+        bottom: $space-32;
+        left: $space-32;
       }
     }
 
@@ -393,8 +397,8 @@ h1, h2 {
   text-align: center;
 
   .grid {
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: $space-20;
+    row-gap: $space-20;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 380px);
 
@@ -443,8 +447,12 @@ h1, h2 {
         color: $gray-scale-1;
         margin: 0;
         font-weight: 700;
-        font-size: 24px;
+        font-size: $space-24;
         line-height: 1.2em;
+
+        @media (max-width: $phone) {
+          font-size: $space-20;
+        }
       }
     }
 
@@ -529,10 +537,27 @@ h1, h2 {
 
       &.memrise-plans {
         background-color: $memrise-primary;
-        background-image: url("/../assets/img/memrise-plans.png");
-        background-position: 50% 50%;
-        background-size: 80%;
-        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        video {
+          height: 90%;
+          transform: rotate(1deg);
+          border-radius: $space-16;
+
+          @media (max-width: $phone) {
+            display: none;
+          }
+        }
+
+        @media (max-width: $phone) {
+          background-image: url("/../assets/img/memrise-plans.png");
+          background-position: 50% 50%;
+          background-size: 80%;
+          background-repeat: no-repeat;
+        }
       }
 
 
@@ -570,8 +595,8 @@ h1, h2 {
   flex-direction: row;
 
   .grid {
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: $space-20;
+    row-gap: $space-20;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 280px;
   }
@@ -589,17 +614,19 @@ h1, h2 {
   .approach-step {
     background-color: $gray-scale-9;
     border-radius: $border-radius;
-    padding: 40px;
+    padding: $space-40;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 
-    &.reveal-3,
-    &.reveal-4 {
-      visibility: visible !important;
-      opacity: 1 !important;
+    @media (max-width: $phone) {
+      &.reveal-3,
+      &.reveal-4 {
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
     }
 
     .approach-step--header {
@@ -639,9 +666,9 @@ h1, h2 {
 
     .approach-step--footer {
       h3 {
-        font-size: 24px;
+        font-size: $space-24;
         line-height: 1.2em;
-        margin: 0 0 8px;
+        margin: 0 0 $space-8;
       }
       p {
         margin: 0;
@@ -654,7 +681,7 @@ h1, h2 {
       width: 280px;
 
       &:last-child {
-        margin-right: 20px;
+        margin-right: $space-20;
       }
     }
 
@@ -735,13 +762,13 @@ h1, h2 {
 
     @media (max-width: $phone) {
       border-radius: 0;
-      padding: 0 $space-24;
+      padding: 0;
       background-color: $gray-scale-9;
     }
   }
 
   .final-word {
-    margin: 40px 0;
+    margin: $space-40 0;
     color: $gray-scale-7;
   }
 
@@ -761,7 +788,7 @@ h1, h2 {
   }
 
   .case-study-header {
-    height: 80vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -840,11 +867,12 @@ h1, h2 {
     .case-study--image {
       border-radius: $border-radius;
       overflow: hidden;
-      margin-top: $space-80;
-      margin-bottom: $space-80;
+      max-width: 780px;
+      margin: $space-80 auto;
       line-height: 0;
 
       &.header {
+        max-width: 100%;
         margin-top: 0;
       }
 
