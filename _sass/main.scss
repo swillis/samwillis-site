@@ -2,6 +2,10 @@
 @import 'normalise';
 @import 'variables';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $background;
   color: $gray-scale-1;
@@ -189,6 +193,11 @@ h1, h2 {
   }
 }
 
+.section {
+  padding-top: $nav-height;
+  margin-bottom: $space-240 - $nav-height;
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -270,6 +279,7 @@ h1, h2 {
 }
 
 .case-studies {
+  margin-top: -$nav-height;
   column-gap: 20px;
   row-gap: 20px;
 
@@ -586,6 +596,12 @@ h1, h2 {
     justify-content: space-between;
     box-sizing: border-box;
 
+    &.reveal-3,
+    &.reveal-4 {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
     .approach-step--header {
       display: flex;
       justify-content: space-between;
@@ -682,6 +698,8 @@ h1, h2 {
 }
 
 .footer {
+  padding-top: $nav-height;
+
   .footer-box {
     flex-direction: column;
     height: 600px;
@@ -808,16 +826,15 @@ h1, h2 {
     }
 
     p, ul, ol {
-      margin: 0 0 $space-32;
+      margin: 0 auto $space-32;
       font-size: 18px;
       line-height: 1.6em;
       font-weight: 500;
-      color: $gray-scale-7;
+      color: $gray-scale-1;
     }
 
     li {
       margin-bottom: $space-32;
-      color: $gray-scale-1;
     }
 
     .case-study--image {

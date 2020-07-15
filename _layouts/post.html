@@ -5,12 +5,16 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+  		ScrollReveal({ duration: 1000 })
+    </script>
   </head>
   <body>
     {% include _nav-posts.html %}
     <div class="case-study-page">
       <div class="container medium">
-        <div class="case-study-header">
+        <div class="case-study-header reveal-1">
           <div class="meta-data">
             <p><span class="number-highlight">{{ page.number }}</span> / 03 — <span>{{ page.company }}</span></p>
           </div>
@@ -37,10 +41,16 @@
           </div>
         </div>
       </div>
-      <div class="container large case-study--content margin-b240">
+      <div class="container large case-study--content margin-b240 reveal-2">
         {{ content }}
       </div>
     </div>
     {% include _footer.html %}
+    <script type="text/javascript">
+      ScrollReveal().reveal('.reveal-1');
+      ScrollReveal().reveal('.reveal-2', { delay: 200 });
+      ScrollReveal().reveal('.reveal-3', { delay: 400 });
+      ScrollReveal().reveal('.reveal-4', { delay: 600 });
+    </script>
   </body>
 </html>

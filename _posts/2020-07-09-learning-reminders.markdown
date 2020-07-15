@@ -77,8 +77,10 @@ Because this feature was to be built on both iOS and Android from the start (som
 
 Finally, I piggybacked some usability sessions being run by another team in order to put the final(ish) design in the hands of real users toes how they responded to it.
 
-
-https://www.dropbox.com/s/a9c2c4bh6n7dcsq/learning%20reminders%20demo.mov?dl=0
+<video controls>
+  <source src="https://www.dropbox.com/s/a9c2c4bh6n7dcsq/learning%20reminders%20demo.mov" type="video/mov">
+  Your browser does not support the video tag.
+</video>
 
 ## Deliver
 
