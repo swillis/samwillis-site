@@ -11,7 +11,7 @@ link-actual: "https://fatllama.com"
 team: "Growth Analyst, Engineer, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="/assets/img/case-studies/fatllama-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="assets/img/case-studies/fatllama-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
 
 ## Background
 
@@ -143,7 +143,7 @@ After white boarding some ideas together, we settled on the following design dec
 We then whipped up a simple Sketch prototype that we could take to some of the Super Lenders we had met with previously. Their feedback was largely positive, with the request to add their own questions coming up a couple of times.
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/messages.gif" alt=""></div>
+<div class="case-study--image"><img src="assets/img/case-studies/messages.gif" alt=""></div>
 
 
 ### Dead listings

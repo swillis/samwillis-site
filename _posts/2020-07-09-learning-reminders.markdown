@@ -11,7 +11,7 @@ link-actual: "https://memrise.com"
 team: "Product Manager, iOS Engineer, Android Engineer, Researcher, QA, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="/assets/img/case-studies/memrise-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="assets/img/case-studies/memrise-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
 
 ## Background
 
@@ -78,8 +78,8 @@ Because this feature was to be built on both iOS and Android from the start (som
 Finally, I piggybacked some usability sessions being run by another team in order to put the final(ish) design in the hands of real users toes how they responded to it.
 
 <video autoplay loop muted playsinline>
-  <source src="/assets/img/learning-reminders-demo.mov" type="video/mov">
-  <source src="/assets/img/learning-reminders-demo.webm" type="video/webm">
+  <source src="assets/img/learning-reminders-demo.mov" type="video/mov">
+  <source src="assets/img/learning-reminders-demo.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
