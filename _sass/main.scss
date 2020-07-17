@@ -77,6 +77,10 @@ h1, h2 {
   display: grid;
 }
 
+.row-span-1 {
+  grid-row-end: 1;
+}
+
 .space-between {
   justify-content: space-between;
 }
@@ -105,6 +109,10 @@ h1, h2 {
 
 .margin-b40 {
   margin-bottom: $space-40 !important;
+}
+
+.margin-b80 {
+  margin-bottom: $space-80 !important;
 }
 
 .margin-b240 {
@@ -157,8 +165,8 @@ h1, h2 {
     border-color: $gray-scale-1;
 
     &:hover {
-      background-color: $color-primary-500;
-      border-color: $color-primary-500;
+      background-color: $gray-scale-6;
+      border-color: $gray-scale-6;
     }
   }
 
@@ -168,8 +176,7 @@ h1, h2 {
     border-color: $gray-scale-1;
 
     &:hover {
-      color: $gray-scale-13;
-      background-color: $gray-scale-1;
+      border-color: $gray-scale-6;
     }
   }
 
@@ -187,8 +194,23 @@ h1, h2 {
   &.btn-footer {
     color: $color-primary-500;
 
+    &:hover {
+      background-color: $color-primary-100;
+      border-color: $color-primary-100;
+    }
+
     @media (max-width: $phone) {
       width: 100%;
+    }
+  }
+
+  &.social {
+    background-color: transparent;
+    color: $gray-scale-1;
+    border-color: $gray-scale-1;
+
+    &:hover {
+      border-color: $color-primary-600;
     }
   }
 }
@@ -281,6 +303,7 @@ h1, h2 {
   margin-top: -$nav-height;
   column-gap: $space-20;
   row-gap: $space-20;
+  grid-template-columns: 1fr 1fr;
 
   .case-study {
     background-color: $gray-scale-9;
@@ -313,6 +336,10 @@ h1, h2 {
 
     &.small {
       height: 400px;
+
+      &.memrise {
+        background-size: auto 70%;
+      }
 
       @media (max-width: $tablet) {
         grid-column-end: span 2;
@@ -864,8 +891,14 @@ h1, h2 {
       margin-bottom: $space-32;
     }
 
+    video {
+      display: block;
+      max-width: 780px;
+      margin: $space-80 auto;
+    }
+
     .case-study--image {
-      border-radius: $border-radius;
+      border-radius: $space-16;
       overflow: hidden;
       max-width: 780px;
       margin: $space-80 auto;
@@ -874,14 +907,11 @@ h1, h2 {
       &.header {
         max-width: 100%;
         margin-top: 0;
+        border-radius: $border-radius;
       }
 
       @media (max-width: $phone) {
         border-radius: $space-8;
-      }
-
-      @media (max-width: $tablet) {
-        border-radius: $space-16;
       }
     }
   }
