@@ -11,7 +11,7 @@ link-actual: "https://memrise.com"
 team: "Product Manager, iOS Engineer, Android Engineer, Researcher, QA, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="assets/img/case-studies/memrise-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="/assets/img/case-studies/memrise-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
 
 ## Background
 
