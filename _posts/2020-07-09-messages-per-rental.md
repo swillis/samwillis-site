@@ -11,7 +11,7 @@ link-actual: "https://fatllama.com"
 team: "Growth Analyst, Engineer, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="/assets/img/case-studies/fatllama-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="//assets/img/case-studies/fatllama-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
 
 ## Background
 
@@ -27,7 +27,7 @@ At the end of Q4, 2018 we were falling short of growth targets, with the effects
 This was when the lender team formed, and was made responsible for the lending experience across the platform.
 
 
-<div class="case-study--image"><img src="assets/img/case-studies/fat-llama/fl-2.png" alt="Graphic I made to represent the lender team’s mission statement"></div>
+<div class="case-study--image"><img src="/assets/img/case-studies/fat-llama/fl-2.png" alt="Graphic I made to represent the lender team’s mission statement"></div>
 
 
 ### OKRs
@@ -143,7 +143,7 @@ After white boarding some ideas together, we settled on the following design dec
 We then whipped up a simple Sketch prototype that we could take to some of the Super Lenders we had met with previously. Their feedback was largely positive, with the request to add their own questions coming up a couple of times.
 
 
-<div class="case-study--image"><img src="assets/img/case-studies/fat-llama/messages.gif" alt=""></div>
+<div class="case-study--image"><img src="/assets/img/case-studies/fat-llama/messages.gif" alt=""></div>
 
 
 ### Dead listings
@@ -158,7 +158,7 @@ As I mentioned, we had a very strong React Engineer on the team who was able to 
 We decided, perhaps hastily, not to phase the rollout but to release 100% straight away. In hindsight I think it may have been better to AB test or phase the rollout, but we were moving pretty fast and I think we were excited to see results.
 
 
-<div class="case-study--image"><img src="assets/img/case-studies/fat-llama/fl-1.jpeg" alt="Live message lender screen"></div>
+<div class="case-study--image"><img src="/assets/img/case-studies/fat-llama/fl-1.jpeg" alt="Live message lender screen"></div>
 
 ### Analysis
 
