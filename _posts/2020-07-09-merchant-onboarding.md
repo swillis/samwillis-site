@@ -81,7 +81,7 @@ Identifying these friction points complimented our initial hypothesis that we sh
 As usual, I started out by outlining the user journeys with pen and paper, trying to identify the quickest ways we could get a user through the process. We serve many many different types of merchant, so there are always tonnes of edge cases to consider, so at this stage I try not to think too much about UI and just focus on jobs to be done and finding the most efficient system that can process these different flows.
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-3.png" alt="Some pen & paper doodles from the early project stages"></div>
+<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-3.jpeg" alt="Some pen & paper doodles from the early project stages"></div>
 
 
 ### Wireframes
