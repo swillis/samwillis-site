@@ -11,7 +11,7 @@ link-actual: "https://gocardless.com"
 team: "2x Engineers, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="//assets/img/case-studies/gocardless-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="/assets/img/case-studies/gocardless-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
 
 ## Background
 
