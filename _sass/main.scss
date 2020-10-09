@@ -260,7 +260,7 @@ h1, h2 {
   justify-content: center;
 
   p.large {
-    margin: 0 0 $space-24;
+    margin: 0 0 $space-32;
 
     @media (max-width: $phone) {
       margin: 0 0 $space-20;
@@ -739,6 +739,10 @@ h1, h2 {
     }
   }
 
+  .container.medium {
+    padding: 0;
+  }
+
   .buttons {
     .btn {
       margin: 0 $space-8;
@@ -865,6 +869,7 @@ h1, h2 {
       max-width: 780px;
       margin-left: auto;
       margin-right: auto;
+      color: $gray-scale-1;
     }
 
     h2 {
@@ -884,7 +889,7 @@ h1, h2 {
       font-size: 18px;
       line-height: 1.6em;
       font-weight: 500;
-      color: $gray-scale-1;
+      color: $gray-scale-7;
     }
 
     li {
@@ -898,7 +903,7 @@ h1, h2 {
     }
 
     .case-study--image {
-      border-radius: $space-16;
+      border-radius: $space-4;
       overflow: hidden;
       max-width: 780px;
       margin: $space-80 auto;
@@ -911,8 +916,17 @@ h1, h2 {
       }
 
       @media (max-width: $phone) {
-        border-radius: $space-8;
+        // border-radius: $space-8;
       }
+    }
+
+    .case-study--image--alt {
+      line-height: 1.2em;
+      font-size: 14px;
+      margin: 10px 0;
+      display: block;
+      color: $gray-scale-7;
+      text-align: center;
     }
   }
 }

@@ -11,7 +11,7 @@ link-actual: "https://gocardless.com"
 team: "2x Engineers, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="/assets/img/case-studies/gocardless-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="/assets/img/case-studies/gocardless-header.jpg" alt="Fancy header image showing some isometric designs."></div>
 
 ## Background
 
@@ -19,7 +19,10 @@ GoCardless is a payments company aiming to create a new payments network for the
 
 My role at GoCardless as a Product Designer is to take problems presented to me by the product management team and solve them through research, applied UX methodologies and ultimately design & deliver solutions, usually in the form of a UI.
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-1.png" alt="The GoCardless dashboard"></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-1.png" alt="The GoCardless dashboard">
+  <span class="case-study--image--alt">The GoCardless dashboard.</span>
+</div>
 
 
 ## Discover
@@ -40,7 +43,10 @@ In order to understand the problem further, confirm some of our hypotheses, and 
 I went through the onboarding process with a bunch of our partnered apps and created a user journey map of the many different touchpoints throughout the process, and started to make a note of the potential friction points.
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-2.png" alt=""></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-2.png" alt="A map of the many different touchpoints in the user journey.">
+  <span class="case-study--image--alt">A map of the many different touchpoints in the user journey.</span>
+</div>
 
 
 ### Gathered internal knowledge
@@ -81,7 +87,10 @@ Identifying these friction points complimented our initial hypothesis that we sh
 As usual, I started out by outlining the user journeys with pen and paper, trying to identify the quickest ways we could get a user through the process. We serve many many different types of merchant, so there are always tonnes of edge cases to consider, so at this stage I try not to think too much about UI and just focus on jobs to be done and finding the most efficient system that can process these different flows.
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-3.jpeg" alt="Some pen & paper doodles from the early project stages"></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-3.jpeg" alt="Some pen & paper doodles from the early project stages">
+  <span class="case-study--image--alt">Some pen & paper doodles from the early project stages.</span>
+</div>
 
 
 ### Wireframes
@@ -98,9 +107,15 @@ That being said, I wasn't completely tied to the visual style of the dashboard f
 At this point I had a series of reviews with the product management, engineering and design teams to make sure everyone was aligned. I believe in sharing my work early and often, so by this point most of them would have seen bits of this work in the previous stages, but this is the stage where I would start booking in some slightly more formal sets of reviews.
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-6.png" alt="Some very early screens"></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-6.png" alt="Some very early screens">
+  <span class="case-study--image--alt">Some very early screens.</span>
+</div>
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-7.png" alt="Some later screens. There were a lot!"></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-7.png" alt="Some later screens. There were a lot!">
+  <span class="case-study--image--alt">Some later screens. There were a lot!</span>
+</div>
 
 
 ### Prototype in InVision
@@ -112,7 +127,10 @@ This is also something that I would start to share with the operations teams (as
 I also ran some usability tests with the prototype. Although ideally these would have been with users external to GC, because of time constraints I had to be a little creative, and opted to use some of the new interns across the company, who hadn't yet been corrupted by the world of Direct Debit, to go through the flow. I recorded these sessions and shared the results with the rest of the product team.
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-4.png" alt="Putting together the prototype in InVision"></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-4.png" alt="Putting together the prototype in InVision">
+  <span class="case-study--image--alt">Putting together the prototype in InVision.</span>
+</div>
 
 ### Rounding up the design phase
 
@@ -124,7 +142,10 @@ After a few rounds of review with the various different stakeholders, I got to a
 The development team for this project consisted of 2 front-end devs, 1 back-end dev and myself. Although I am not a super experienced front-end engineer, I know my way around a React app and was able to help out here and there with the build and perform regular design reviews and tweaks as we built this flow over the course of about 3 weeks (and a couple of very late nights thrown in for good measure).
 
 
-<div class="case-study--image"><img src="/assets/img/case-studies/gocardless/gc-5.png" alt="A screen from the live flow"></div>
+<div class="case-study--image">
+  <img src="/assets/img/case-studies/gocardless/gc-5.png" alt="A screen from the live flow">
+  <span class="case-study--image--alt">A screen from the live flow.</span>
+</div>
 
 
 ### Test/iterate

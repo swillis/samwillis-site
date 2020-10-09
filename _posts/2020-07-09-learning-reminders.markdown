@@ -11,7 +11,7 @@ link-actual: "https://memrise.com"
 team: "Product Manager, iOS Engineer, Android Engineer, Researcher, QA, Product Designer"
 ---
 
-<div class="case-study--image header"><img src="/assets/img/case-studies/memrise-header.jpg" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image header"><img src="/assets/img/case-studies/memrise-header.jpg" alt="Fancy header image showing some isometric designs."></div>
 
 ## Background
 
@@ -27,7 +27,10 @@ As a language learning app it’s important we help users build a habit around l
 To get a better understanding of why D1 retention was falling, we conducted surveys and user interviews, and reviewed data from previous research efforts. From this work generated a whole database of insights as to why users stopped using Memrise, and a key theme that emerged was a lack of effective and timely prompts for users to come back and learn.
 
 
-<div class="case-study--image"><img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590997767380_airtable.com_tbleU93m20M1Tq7Oa_viwScTYgU83I4ZDIRLaptop+with+HiDPI+screen.png" alt="Our Airtable database of insights"></div>
+<div class="case-study--image">
+  <img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590997767380_airtable.com_tbleU93m20M1Tq7Oa_viwScTYgU83I4ZDIRLaptop+with+HiDPI+screen.png" alt="Our Airtable database of insights">
+  <span class="case-study--image--alt">Our Airtable database of insights.</span>
+</div>
 
 ## Define
 
@@ -58,17 +61,26 @@ With the project defined and the scope reasonably tight, I set to work generatin
 
 I started by identifying the user flows and touchpoints that I needed to design for, and creating them in Whimsical. The feature would initially appear as part of our onboarding flow, allowing new users to set their reminders shortly after sign up. But we also wanted to highlight the feature to existing users (via the home screen), and all users would need a place to go if they wanted to update their notification preferences. Lastly, there was the push notification itself and what that should look like and say.
 
-<div class="case-study--image"><img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590942645633_Screenshot+2020-05-31+at+17.30.34.png" alt="Map of our early user journey"></div>
+<div class="case-study--image">
+  <img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590942645633_Screenshot+2020-05-31+at+17.30.34.png" alt="Map of our early user journey">
+    <span class="case-study--image--alt">Map of our early user journey.</span>
+</div>
 
 
 For the onboarding screen where new users set their learning schedule, I started with a series of wireframes, and created clickable prototypes that we could pass round internally and get feedback. We also spent time in our design team critiques going over the functionality and best practices.
 
-<div class="case-study--image"><img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590943545777_Screenshot+2020-05-31+at+17.45.32.png" alt="Early concepts for how users could input their learning schedule preferences"></div>
+<div class="case-study--image">
+  <img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590943545777_Screenshot+2020-05-31+at+17.45.32.png" alt="Early concepts for how users could input their learning schedule preferences">
+    <span class="case-study--image--alt">Early concepts for how users could input their learning schedule preferences.</span>
+</div>
 
 
 Based on this feedback I honed it down to the standout one or two options, that we then did some quick and dirty usability testing via Maze, just to round off the hard edges.
 
-<div class="case-study--image"><img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590943737732_Screenshot+2020-05-31+at+17.48.45.png" alt="Part of a Maze report on our early concepts"></div>
+<div class="case-study--image">
+  <img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590943737732_Screenshot+2020-05-31+at+17.48.45.png" alt="Part of a Maze report on our early concepts">
+    <span class="case-study--image--alt">Part of a Maze report on our early concepts.</span>
+</div>
 
 
 Maze gave us some beautiful looking (if not 100% useful) readouts, and helped me refine the design down further. We were getting close.
@@ -78,8 +90,8 @@ Because this feature was to be built on both iOS and Android from the start (som
 Finally, I piggybacked some usability sessions being run by another team in order to put the final(ish) design in the hands of real users toes how they responded to it.
 
 <video autoplay loop muted playsinline>
-  <source src="assets/img/learning-reminders-demo.mov" type="video/mov">
-  <source src="assets/img/learning-reminders-demo.webm" type="video/webm">
+  <source src="/assets/img/learning-reminders-demo.webm" type="video/webm">
+  <source src="/assets/img/learning-reminders-demo.mov" type="video/mov">
   Your browser does not support the video tag.
 </video>
 
@@ -98,7 +110,10 @@ The first version was scoped down to:
 
 We believed most of the value was tied up in allowing users to set their “learning schedule” as it were, so we’d deliver that first and follow up with the notification preference centre later.
 
-<div class="case-study--image"><img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590945256507_learning+reminders+android.png" alt="Android builds ready for testing, including RTL version for Arabic."></div>
+<div class="case-study--image">
+  <img src="https://paper-attachments.dropbox.com/s_89624307E7F793CC850C5B2F4700A293FF1664ECDE638D6D7789A6E52A17F9DA_1590945256507_learning+reminders+android.png" alt="Android builds ready for testing, including RTL version for Arabic.">
+    <span class="case-study--image--alt">Android builds ready for testing, including RTL version for Arabic.</span>
+</div>
 
 
 
