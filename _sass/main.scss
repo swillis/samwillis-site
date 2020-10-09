@@ -30,13 +30,13 @@ a {
 }
 
 p {
-  color: $gray-scale-1;
+  color: $gray-scale-7;
   margin-top: 0;
 
   &.large {
     font-size: $space-24;
-    line-height: 1.5em;
-    margin-bottom: $space-48;
+    line-height: 1.4em;
+    margin-bottom: $space-64;
 
     @media (max-width: $phone) {
       font-size: $space-20;
@@ -170,6 +170,17 @@ h1, h2 {
     }
   }
 
+  &.tertiary {
+    background-color: $gray-scale-10;
+    color: $gray-scale-1;
+    border-color: $gray-scale-10;
+
+    &:hover {
+      background-color: $gray-scale-9;
+      border-color: $gray-scale-9;
+    }
+  }
+
   &.outline {
     background-color: transparent;
     color: $gray-scale-1;
@@ -263,7 +274,7 @@ h1, h2 {
     margin: 0 0 $space-32;
 
     @media (max-width: $phone) {
-      margin: 0 0 $space-20;
+      margin: 0 0 $space-32;
     }
   }
 }
@@ -271,9 +282,13 @@ h1, h2 {
 
 .current-status {
   font-weight: 500;
+  display: flex;
+  align-items: baseline;
 
   p {
-    color: $gray-scale-6;
+    color: $gray-scale-7;
+    margin-bottom: 0;
+    line-height: 1.4em;
   }
 
   .role {
@@ -285,7 +300,7 @@ h1, h2 {
     height: $space-8;
     width: $space-8;
     border-radius: 50%;
-    margin-right: $space-4;
+    margin-right: $space-8;
     background-color: $color-success-500;
     position: relative;
     top: -1px;
@@ -765,6 +780,10 @@ h1, h2 {
     justify-content: center;
     border-radius: $border-radius;
     padding: 0 $space-80;
+
+    p {
+      color: $gray-scale-1;
+    }
 
     .contact-buttons {
       display: flex;
