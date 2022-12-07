@@ -9,21 +9,31 @@ html {
 
 body {
   background-color: $background;
-  color: #fff;
-  font-family: 'Unbounded', Helvetica, sans-serif;
+  color: $grey-100;
+  font-family: "test", Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 1.4em;
-  font-weight: 350;
+  line-height: 1.6em;
+  font-weight: 360;
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   display: flex;
-  flex-grow: 1;
-  // font-variation-settings: "wght" 375;
+  height: 100%;
 }
 
 a {
-  color: #fff;
-  text-decoration: underline;
+  // color: $grey-100;
+  font-weight: 390;
+  background: linear-gradient(to left, #ff5f6d, #ffc371);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  position: relative;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.6;
 }
 
 .page {
@@ -31,13 +41,13 @@ a {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: 1432px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .nav {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   margin-bottom: 80px;
 }
 
@@ -48,17 +58,19 @@ a {
 }
 
 .nav-item--primary {
-  // margin-bottom: 4px;
+  color: $grey-100;
+  // font-size: 72px;
 }
 
 .nav-item--secondary {
-  color: #bbb;
+  color: $grey-200;
 }
 
 .content {
+  display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  gap: 24px;
+  gap: 40px;
 }
 
 .content .half {
@@ -70,11 +82,33 @@ a {
 }
 
 .content p {
-  font-size: 16px;
-  line-height: 1.5em;
-  color: #bbb;
+  font-size: 18px;
+  line-height: 1.6em;
+  color: $grey-200;
 }
 
 .content p:first-child {
   color: white;
+  font-weight: 390;
+}
+
+.blob-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -600px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 80px;
+}
+
+.blob {
+	fill: #444;
+	fill: url(#MyGradient);
+  height: 1000px;
+  width: 1000px;
+  z-index: 0;
+  filter: blur(80px);
 }

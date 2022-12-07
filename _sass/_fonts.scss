@@ -1,20 +1,6 @@
 @font-face {
-  font-family: "Haptik";
-  src: url("/assets/fonts/GT-Haptik-Regular.woff2") format("woff2"),
-       url("/assets/fonts/GT-Haptik-Regular.woff") format("woff");
- font-weight: 400;
-}
-
-@font-face {
-  font-family: "Haptik";
-  src: url("/assets/fonts/GT-Haptik-Medium.woff2") format("woff2"),
-       url("/assets/fonts/GT-Haptik-Medium.woff") format("woff");
- font-weight: 500;
-}
-
-@font-face {
-  font-family: "Haptik";
-  src: url("/assets/fonts/GT-Haptik-Black.woff2") format("woff2"),
-       url("/assets/fonts/GT-Haptik-Black.woff") format("woff");
- font-weight: 900;
+  font-family: "test";
+  src: url("/assets/fonts/Unbounded-Variable.woff2") format("woff2 supports variations"),
+  url("/assets/fonts/Unbounded-Variable.woff2") format("woff2-variations");
+  font-weight: 100 1000;
 }
