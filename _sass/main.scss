@@ -21,12 +21,12 @@ body {
 }
 
 a {
-  // color: $grey-100;
+  color: $grey-100;
   font-weight: 390;
-  background: linear-gradient(to left, #ff5f6d, #ffc371);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
+  // background: linear-gradient(to left, #ff5f6d, #ffc371);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // text-decoration: none;
   position: relative;
   opacity: 1;
   transition: all 0.3s;
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .content p:first-child {
-  color: white;
+  color: $grey-100;
   font-weight: 390;
 }
 
@@ -110,5 +110,12 @@ a:hover {
   height: 1000px;
   width: 1000px;
   z-index: 0;
-  filter: blur(80px);
+  // filter: blur(80px);
 }
+
+// .stripes {
+//   margin: 4rem 0;
+//   display: flex;
+//   flex: 1;
+//   background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, black 8px, #f6d1cf 10px);
+// }
