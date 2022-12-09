@@ -16,9 +16,9 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
-  display: flex;
-  height: 100%;
   overflow: hidden;
+  height: 100%;
+  display: flex;
 }
 
 a {
@@ -36,20 +36,53 @@ a:hover {
 .page {
   padding: 40px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 1;
   margin: 0 auto;
   z-index: 1;
-  gap: 3em;
+  gap: 4em;
   max-width: 1920px;
   min-width: 320px;
+  flex: 1;
+  overflow: scroll;
 
-  @media (max-width: $tablet) {
-    flex-direction: column;
-  }
+  // @media (max-width: $tablet) {
+  //   flex-direction: column;
+  // }
 
   @media (max-width: $mobile) {
     padding: 24px;
+  }
+}
+
+.header {
+  display: flex;
+  gap: 3em;
+
+  .column.small:last-child {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  gap: 3em;
+
+  .column.centre {
+    justify-content: space-between;
+  }
+
+  @media (max-width: $tablet) {
+    .column.centre {
+      justify-content: flex-start;
+    }
+    
+    .column.small {
+      display: none;
+    }
   }
 }
 
@@ -58,28 +91,29 @@ a:hover {
   flex-direction: column;
 
   &.centre {
-    width: 600px;
-    justify-content: space-between;
+    flex: 2;
+    position: relative;
 
     @media (max-width: $tablet) {
-      width: auto;
+      flex: 1;
     }
   }
 
   &.small {
     flex: 1;
     position: relative;
-
-    @media (max-width: $tablet) {
-      flex: 0;
-    }
   }
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
-}
+
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+  }
+
 
 .nav-item--primary {
   color: $grey-100;
@@ -88,14 +122,6 @@ a:hover {
 
 .nav-item--secondary {
   color: $grey-200;
-}
-
-.blurb {
-  margin-top: 6em;
-
-  @media (max-width: $tablet) {
-    margin-top: 3em;
-  }
 }
 
 .blurb p {
@@ -114,7 +140,7 @@ a:hover {
   justify-self: flex-end;
 
   @media (max-width: $tablet) {
-    margin-top: 2em;
+    margin-top: 5em;
   }
 
   @media (max-width: $mobile) {
@@ -130,34 +156,43 @@ a:hover {
 .blob-container-right {
   position: absolute;
 
-  @media (max-width: $tablet) {
-    display: none;
+  .blob {
+    fill: url(#Stripey-1);
   }
 }
 
 .blob-container-left {
-  // left: -900px;
   right: 0;
   bottom: -400px;
-
-  .blob {
-    height: 1200px;  
-    width: 1200px;
-  }
 }
 
 .blob-container-right {
   left: 0;
-  bottom: -200px;
+}
+
+.blob-container-centre {
+  position: absolute;
+  display: none;
 
   .blob {
-    height: 1200px;  
-    width: 1200px;
+    fill: url(#Stripey-2);
+  }
+
+  @media (max-width: $tablet) {
+    display: block;
+    bottom: -800px;
+    left: 0;
+    right: 0;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
   }
 }
 
 .blob {
 	fill: #444;
-	fill: url(#MyGradient);
   z-index: 0;
+  height: 1200px;  
+  width: 1200px;
 }
