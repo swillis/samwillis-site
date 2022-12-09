@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.6;
+  color: $grey-200;
 }
 
 .page {
@@ -40,8 +40,17 @@ a:hover {
   flex-grow: 1;
   margin: 0 auto;
   z-index: 1;
-  gap: 40px;
+  gap: 3em;
   max-width: 1920px;
+  min-width: 320px;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 24px;
+  }
 }
 
 .column {
@@ -51,10 +60,19 @@ a:hover {
   &.centre {
     width: 600px;
     justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      width: auto;
+    }
   }
 
   &.small {
     flex: 1;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      flex: 0;
+    }
   }
 }
 
@@ -73,7 +91,11 @@ a:hover {
 }
 
 .blurb {
-  margin-top: 80px;
+  margin-top: 6em;
+
+  @media (max-width: $tablet) {
+    margin-top: 3em;
+  }
 }
 
 .blurb p {
@@ -88,8 +110,16 @@ a:hover {
 .contact-links {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 3em;
   justify-self: flex-end;
+
+  @media (max-width: $tablet) {
+    margin-top: 2em;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
 }
 
 .contact-link {
@@ -99,25 +129,30 @@ a:hover {
 .blob-container-left,
 .blob-container-right {
   position: absolute;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .blob-container-left {
-  left: -400px;
+  // left: -900px;
+  right: 0;
   bottom: -400px;
 
   .blob {
-    height: 800px;  
-    width: 800px;
+    height: 1200px;  
+    width: 1200px;
   }
 }
 
 .blob-container-right {
-  right: -300px;
-  bottom: -300px;
+  left: 0;
+  bottom: -200px;
 
   .blob {
-    height: 600px;  
-    width: 600px;
+    height: 1200px;  
+    width: 1200px;
   }
 }
 
