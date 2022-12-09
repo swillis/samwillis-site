@@ -16,7 +16,6 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
-  overflow: hidden;
   height: 100%;
   display: flex;
 }
@@ -37,21 +36,17 @@ a:hover {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   margin: 0 auto;
   z-index: 1;
   gap: 4em;
   max-width: 1920px;
   min-width: 320px;
   flex: 1;
-  overflow: scroll;
-
-  // @media (max-width: $tablet) {
-  //   flex-direction: column;
-  // }
+  overflow: hidden;
 
   @media (max-width: $mobile) {
     padding: 24px;
+    overflow: scroll;
   }
 }
 
@@ -155,34 +150,40 @@ a:hover {
 .blob-container-left,
 .blob-container-right {
   position: absolute;
+  height: 100%;
+  width: 100%;
 
   .blob {
+    position: absolute;
     fill: url(#Stripey-1);
   }
 }
 
 .blob-container-left {
-  right: 0;
-  bottom: -400px;
+  .blob {
+    right: 0;
+  }
 }
 
 .blob-container-right {
-  left: 0;
+  .blob {
+    left: 0;
+  }
 }
 
 .blob-container-centre {
-  position: absolute;
   display: none;
 
   .blob {
     fill: url(#Stripey-2);
+    position: absolute;
+    top: -80px;
   }
 
   @media (max-width: $tablet) {
-    display: block;
-    bottom: -800px;
-    left: 0;
-    right: 0;
+    display: flex;
+    flex: 1;
+    position: relative;
   }
 
   @media (max-width: $mobile) {
