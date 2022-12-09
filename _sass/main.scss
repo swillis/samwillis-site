@@ -12,21 +12,18 @@ body {
   color: $grey-100;
   font-family: "test", Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 1.6em;
-  font-weight: 360;
+  line-height: 1.5rem;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   display: flex;
   height: 100%;
+  overflow: hidden;
 }
 
 a {
   color: $grey-100;
-  font-weight: 390;
-  // background: linear-gradient(to left, #ff5f6d, #ffc371);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // text-decoration: none;
+  text-decoration: none;
   position: relative;
   opacity: 1;
   transition: all 0.3s;
@@ -39,83 +36,93 @@ a:hover {
 .page {
   padding: 40px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
   margin: 0 auto;
   z-index: 1;
+  gap: 40px;
+  max-width: 1920px;
 }
 
-.nav {
+.column {
   display: flex;
-  gap: 40px;
-  margin-bottom: 80px;
+  flex-direction: column;
+
+  &.centre {
+    width: 600px;
+    justify-content: space-between;
+  }
+
+  &.small {
+    flex: 1;
+  }
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
 .nav-item--primary {
   color: $grey-100;
-  // font-size: 72px;
+  display: flex;
 }
 
 .nav-item--secondary {
   color: $grey-200;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-  gap: 40px;
+.blurb {
+  margin-top: 80px;
 }
 
-.content .half {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-  height: 100%;
-}
-
-.content p {
-  font-size: 18px;
-  line-height: 1.6em;
+.blurb p {
+  font-size: 16px;
   color: $grey-200;
 }
 
-.content p:first-child {
+.blurb p:first-child {
   color: $grey-100;
-  font-weight: 390;
 }
 
-.blob-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: -600px;
+.contact-links {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 80px;
+  flex-direction: row;
+  gap: 24px;
+  justify-self: flex-end;
+}
+
+.contact-link {
+  display: flex;
+}
+
+.blob-container-left,
+.blob-container-right {
+  position: absolute;
+}
+
+.blob-container-left {
+  left: -400px;
+  bottom: -400px;
+
+  .blob {
+    height: 800px;  
+    width: 800px;
+  }
+}
+
+.blob-container-right {
+  right: -300px;
+  bottom: -300px;
+
+  .blob {
+    height: 600px;  
+    width: 600px;
+  }
 }
 
 .blob {
 	fill: #444;
 	fill: url(#MyGradient);
-  height: 1000px;
-  width: 1000px;
   z-index: 0;
-  // filter: blur(80px);
 }
-
-// .stripes {
-//   margin: 4rem 0;
-//   display: flex;
-//   flex: 1;
-//   background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, black 8px, #f6d1cf 10px);
-// }
