@@ -75,10 +75,6 @@ a:hover {
   }
 
   @media (max-width: $tablet) {
-    .column.centre {
-      justify-content: flex-start;
-    }
-    
     .column.small {
       display: none;
     }
@@ -145,92 +141,13 @@ a:hover {
   @media (max-width: $mobile) {
     flex-direction: column;
     gap: 2em;
+    margin-bottom: 4em;
   }
 }
 
 .contact-link {
   display: flex;
 }
-
-.blob-container-left,
-.blob-container-right {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-
-  .blob {
-    position: absolute;
-    fill: url(#Stripey-1);
-  }
-}
-
-.blob-container-left {
-  .blob {
-    right: 0;
-  }
-}
-
-.blob-container-right {
-  .blob {
-    left: 0;
-  }
-}
-
-.blob-container-centre {
-  display: none;
-
-  .blob {
-    fill: url(#Stripey-2);
-    position: absolute;
-    top: -80px;
-  }
-
-  @media (max-width: $tablet) {
-    display: flex;
-    flex: 1;
-    position: relative;
-  }
-
-  @media (max-width: $mobile) {
-    display: none;
-  }
-}
-
-.blob {
-	fill: #444;
-  z-index: 0;
-  height: 1200px;  
-  width: 1200px;
-}
-
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-// .gradient {
-//   $size: 250px;
-//   $speed: 50s;
-//   $easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
-//   width: $size;
-//   height: $size;
-//   filter: blur(50px);
-//   background-image: linear-gradient(hsl(158, 82, 57), hsl(252, 82, 57));
-//   animation: rotate $speed $easing alternate infinite;
-//   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-// }
-
-// @media (min-width: 720px) {
-//   .gradient {
-//     $size: 500px;
-//   }
-// }
 
 .lines {
   position: absolute;
@@ -270,7 +187,11 @@ a:hover {
   
     &::after {
       animation-delay: 2s;
-    }  
+    }
+
+    @media (max-width: $tablet) {
+      left: 20px;
+    }
   }
 
   &:nth-child(2) {
@@ -279,6 +200,10 @@ a:hover {
 
     &::after {
       animation-delay: 5s
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
     }
   }
 
@@ -297,6 +222,10 @@ a:hover {
     &::after {
       animation-delay: 6s
     }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &:nth-child(5) {
@@ -304,6 +233,10 @@ a:hover {
 
     &::after {
       animation-delay: 3s
+    }
+
+    @media (max-width: $tablet) {
+      right: 20px;
     }
   }
 }
