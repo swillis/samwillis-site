@@ -120,7 +120,7 @@ a:hover {
 }
 
 .blurb p {
-  font-size: 16px;
+  font-size: 20px;
   color: $grey-200;
   
   &:first-child {
@@ -129,6 +129,10 @@ a:hover {
 
   a img {
     vertical-align: sub;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
   }
 }
 
